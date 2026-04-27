@@ -1,0 +1,177 @@
+{
+  "name": "Order",
+  "type": "object",
+  "properties": {
+    "invoice": {
+      "type": "string",
+      "description": "Invoice number"
+    },
+    "company": {
+      "type": "string",
+      "description": "Company name"
+    },
+    "brand": {
+      "type": "string",
+      "description": "Brand name"
+    },
+    "contact": {
+      "type": "string",
+      "description": "Contact person name"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Phone number"
+    },
+    "event_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Event date (first day)"
+    },
+    "multi_day": {
+      "type": "boolean",
+      "default": false,
+      "description": "Multi-day event"
+    },
+    "extra_dates": {
+      "type": "array",
+      "description": "Additional event dates",
+      "items": {
+        "type": "string"
+      }
+    },
+    "has_server": {
+      "type": "boolean",
+      "default": false,
+      "description": "Server needed"
+    },
+    "service_time": {
+      "type": "string",
+      "description": "Service time (start)"
+    },
+    "service_time_end": {
+      "type": "string",
+      "description": "Service time (end)"
+    },
+    "setup_time": {
+      "type": "string",
+      "description": "Setup time"
+    },
+    "attire": {
+      "type": "string",
+      "description": "Server attire"
+    },
+    "has_delivery": {
+      "type": "boolean",
+      "default": false,
+      "description": "Delivery only"
+    },
+    "delivery_time": {
+      "type": "string",
+      "description": "Delivery time"
+    },
+    "delivery_notes": {
+      "type": "string",
+      "description": "Delivery notes"
+    },
+    "address": {
+      "type": "string",
+      "description": "Event address"
+    },
+    "address_notes": {
+      "type": "string",
+      "description": "Address notes"
+    },
+    "quantity": {
+      "type": "number",
+      "description": "Total popsicle quantity"
+    },
+    "flavors": {
+      "type": "array",
+      "description": "Flavor list with quantities",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "qty": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "bag_type": {
+      "type": "string",
+      "description": "Bag type"
+    },
+    "stick_logo_color": {
+      "type": "string",
+      "description": "Stick logo color"
+    },
+    "has_chocolate": {
+      "type": "boolean",
+      "default": false,
+      "description": "Chocolate coating needed"
+    },
+    "chocolate_type": {
+      "type": "string",
+      "enum": [
+        "dark",
+        "white"
+      ],
+      "description": "Chocolate type"
+    },
+    "sticker_image_url": {
+      "type": "string",
+      "description": "Sticker design image URL"
+    },
+    "csb_image_url": {
+      "type": "string",
+      "description": "CSB stick design image URL"
+    },
+    "cart_style": {
+      "type": "string",
+      "description": "Cart style"
+    },
+    "cart_print": {
+      "type": "string",
+      "description": "Cart print option"
+    },
+    "cart_sides": {
+      "type": "string",
+      "description": "Number of cart sides to print"
+    },
+    "cart_image_url": {
+      "type": "string",
+      "description": "Cart design image URL"
+    },
+    "umbrella": {
+      "type": "string",
+      "description": "Umbrella color/style"
+    },
+    "toppings": {
+      "type": "array",
+      "description": "Toppings list",
+      "items": {
+        "type": "string"
+      }
+    },
+    "has_toppings": {
+      "type": "boolean",
+      "default": false,
+      "description": "Toppings needed"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "confirmed",
+        "completed",
+        "cancelled"
+      ],
+      "default": "pending",
+      "description": "Order status"
+    }
+  },
+  "required": []
+}
